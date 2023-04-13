@@ -1,5 +1,6 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import DetailsHeader from '../components/DetailsHeader';
 
 export default function DetailsScreen({ navigation }) {
     navigation.setOptions({
@@ -11,15 +12,11 @@ export default function DetailsScreen({ navigation }) {
 
     return (
         <ScrollView>
-            <View style={styles.weatherHeader}>
-                <SafeAreaView
-                    style={{ alignItems: 'center', paddingTop: insets.top }}
-                >
+            <DetailsHeader>
                     <Text style={styles.headerSubtitle}>Moscow</Text>
                     <Text style={styles.headerTitle}>2°</Text>
                     <Text style={styles.descriptionSubtitle}>Feels like 0°</Text>
-                </SafeAreaView>
-            </View>
+            </DetailsHeader>
         </ScrollView>
     );
 }
