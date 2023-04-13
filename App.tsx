@@ -15,7 +15,7 @@ export default function App() {
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator>
-          {isApiKeyPresent ? (
+          {isApiKeyPresent() ? (
             <Stack.Screen name="Weather" component={ListScreen} />
           ) : (
             <Stack.Screen name="SetApiKey" component={SetApiKeyScreen} />

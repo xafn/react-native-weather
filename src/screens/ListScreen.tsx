@@ -20,12 +20,7 @@ export default function ListScreen({ navigation }) {
                 flex: 1,
                 justifyContent: 'space-between',
                 alignItems: 'center',
-
-                // Paddings to handle safe area
                 paddingTop: insets.top + Constants.statusBarHeight,
-                marginBottom: insets.bottom,
-                marginLeft: insets.left,
-                marginRight: insets.right,
             }}
         >
             <ScrollView style={styles.entries}>
